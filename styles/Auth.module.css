@@ -1,0 +1,44 @@
+.box{
+    position: relative;
+    min-width: 448px;
+    min-height: 590px;
+    /* min-width: fit-content; */
+    overflow: hidden;
+}
+.box::before {
+    content: '';
+    min-width: 448px;
+    min-height: 590px;
+    top: -50%;
+    left: -50%;
+    position: absolute ;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent,#34e6f3, #34e6f3);
+    animation: animate 6s linear infinite;
+}
+.box::after {
+    content: '';
+    min-width: 448px;
+    min-height: 590px;
+    top: -50%;
+    left: -50%;
+    position: absolute ;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, #34e6f3, #34e6f3);
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.form {
+    position: absolute;
+    inset: 6px;
+    background: #fff;
+    z-index: 10;
+}
